@@ -30,7 +30,7 @@ public class Qes1_13 {
 	    	 		d = 0l;
 	    	 		e = 0.0f;
 	    	 		f = 0.0;
-	    	 		g = 0;
+	    	 		g = '\u0000';
 	    	 		h = null;
 	    	 		i = false;
 	    			
