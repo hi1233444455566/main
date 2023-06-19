@@ -1,43 +1,54 @@
 package process;
 
-// 処理用スーパークラスUserNameを作成
+import java.util.Objects;
+
+// 処理用スーパークラスを作成
 public class UserName {
 
-	// nameフィールドの作成
+	// フィールドの作成
 	private String name;
 
-	// nameフィールドにsetメソッドでアクセス
-	public void setName(String name) {
+	// コンストラクタ（引数なし）の作成
+	public UserName() {
 
-		// 空白の場合、数字のみの場合、null判定された場合
-		if(("".equals(name)) || (name.matches("^[0-9]+$")) || (name == null)) {
+		// 値を代入
+		this.name = "名前";
 
-			// 処理を止めて
-			throw new IllegalArgumentException
-
-			// エラーメッセージを表示する
-			("\n" + "\n" + "setName()の()に名前を入れてください" + "\n" + "なお、数字のみを入力することはできません" + "\n");
-
-		} 
-
-		// それ以外の場合は、nameフィールドに代入する
-		this.name = name;
 	}
 
-	// nameフィールドにgetメソッドでアクセス
+	// コンストラクタ（引数あり）の作成
+	public UserName(String name) {
+
+		// 引数を代入
+		this.name = name;
+
+	}
+
+	// フィールドにメソッドでアクセス
+	public void setName(String name) {
+
+		// nullの場合
+		if (Objects.isNull(name)) {
+
+			// メッセージを表示する
+			System.out.print("名前を入力してください");
+
+			// それ以外	
+		} else {
+
+			// 値を代入する
+			this.name = name;
+
+		}
+
+	}
+
+	// フィールドにメソッドでアクセス
 	public String getName() {
 
 		// 戻り値
 		return this.name;
 
-	}
-
-	// 呼び出し用メソッドを作成
-	public void hello() {
-		
-		// コンソールに出力する
-		System.out.println("こんにちは 「 " + getName() + " 」 さん");
-		
 	}
 
 }

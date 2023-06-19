@@ -1,5 +1,7 @@
 package action;
 
+import java.util.Scanner;
+
 import process.Status;
 
 // 実行用クラスを作成
@@ -7,17 +9,26 @@ public class Execution {
 
 	public static void main(String[] args) {
 
-		// statusのインスタンスを生成
+		// インスタンスを生成
 		Status status = new Status();
 
-		// setに入力された値をnameに代入する
-		status.setName("名前");
+		// インスタンスを生成
+		Scanner scanner = new Scanner(System.in);
+		
+		// コンソールに入力された文字を取得する
+		String name = scanner.nextLine();
 
-		// helloを呼び出し
-		status.hello();
+		// 入力された値を代入する
+		status.setName(name);
 
-		// actionを呼び出し
-		status.action();
+		// メッセージを表示する
+		System.out.println("こんにちは 「 " + status.getName() + " 」 さん");
+		
+		// ステータス値を表示する呼び出し
+		status.status();
+		
+		// メッセージを表示する
+		System.out.println("\n" + "さあ冒険に出かけよう！");
 
 	}
 
