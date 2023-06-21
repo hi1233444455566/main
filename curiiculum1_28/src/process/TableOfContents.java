@@ -90,15 +90,6 @@ public class TableOfContents {
 			// 終了
 			break;
 
-		// それ以外の場合
-		default:
-
-			// 値を代入する
-			this.searchNumber = 6;
-
-			// 終了
-			break;
-
 		}
 
 	}

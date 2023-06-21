@@ -29,12 +29,12 @@ public class AnimalName {
 
 		// 戻り値を返す
 		return this.animalName;
-		
+
 	}
 
 	// 値を代入するメソッドを作成
 	public void setAnimalName(String animalName) {
-		
+
 		// nullの場合
 		if (Objects.isNull(animalName)) {
 
