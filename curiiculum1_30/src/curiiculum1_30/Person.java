@@ -7,6 +7,9 @@ public class Person {
 	public double height;
 	public double weight;
 
+	// 合計人数をカウントする用の変数の宣言と初期化
+	public static int num = 0;
+
 	// コンストラクタを定義しインスタンスフィールドに値をセット
 	public Person(String name, int age, double height, double weight) {
 
@@ -15,6 +18,10 @@ public class Person {
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
+
+		// 人数分回数を増やす
+		++num;
+
 	}
 
 	// メソッドを定義
@@ -28,9 +35,6 @@ public class Person {
 
 	}
 
-	// 合計人数をカウントする用の変数の宣言と初期化
-	public static int num = 0;
-
 	// コンソールに出力するメソッドを定義
 	public void print(double bmi) {
 
@@ -38,11 +42,6 @@ public class Person {
 		System.out.println("名前は" + this.name + "です");
 		System.out.println("年は" + this.age + "です");
 		System.out.println("BMIは" + String.format("%.1f", bmi) + "です");
-
-		// メソッドを呼び出した回数を計測する
-		++num;
-		
-		// コンソールに出力する
 		System.out.println("合計" + num + "人です");
 
 	}
