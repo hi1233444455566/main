@@ -2,7 +2,7 @@ package curiiculum1_32;
 
 public class Person {
 
-	// 課題のコピー
+	// インスタンスフィールドの定義
 	public String name;
 	public int age;
 	public double height;
@@ -11,8 +11,10 @@ public class Person {
 	// クラスフィールドの宣言と初期化（問題1）
 	public static int count = 0;
 
-	// 課題のコピー
+	// コンストラクタを定義しインスタンスフィールドに値をセット
 	Person(String name, int age, double height, double weight) {
+		
+		// 引数を代入する
 		this.name = name;
 		this.age = age;
 		this.height = height;
@@ -20,15 +22,21 @@ public class Person {
 		
 		// 人数分回数を増やす（問題2）
 		++count;
+		
 	}
 
-	// 課題のコピー
+	// 計算メソッドを定義
 	public double bmi() {
+		
+		// 計算結果を返す
 		return this.weight / this.height / this.height;
+		
 	}
 
-	// 課題のコピー
+	// 出力メソッドを定義
 	public void print() {
+		
+		// コンソールに出力する
 		System.out.println("名前は" + this.name + "です");
 		System.out.println("年は" + this.age + "です");
 		
