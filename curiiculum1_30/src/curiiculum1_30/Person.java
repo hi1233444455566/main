@@ -28,6 +28,9 @@ public class Person {
 
 	}
 
+	// 合計人数をカウントする用の変数の宣言と初期化
+	public static int num = 0;
+
 	// コンソールに出力するメソッドを定義
 	public void print(double bmi) {
 
@@ -35,7 +38,12 @@ public class Person {
 		System.out.println("名前は" + this.name + "です");
 		System.out.println("年は" + this.age + "です");
 		System.out.println("BMIは" + String.format("%.1f", bmi) + "です");
-		System.out.println("合計" + 1 + "人です");
+
+		// メソッドを呼び出した回数を計測する
+		++num;
+		
+		// コンソールに出力する
+		System.out.println("合計" + num + "人です");
 
 	}
 
